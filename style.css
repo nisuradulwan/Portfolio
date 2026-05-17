@@ -1,0 +1,35 @@
+:root {
+  /* Dark theme (default) */
+  --bg:          #080b14;
+  --bg-2:        #0d1220;
+  --bg-3:        #111827;
+  --surface:     rgba(255,255,255,0.04);
+  --surface-2:   rgba(255,255,255,0.07);
+  --border:      rgba(255,255,255,0.08);
+  --border-2:    rgba(255,255,255,0.12);
+
+  --cyan:        #00d4ff;
+  --cyan-dim:    rgba(0,212,255,0.15);
+  --violet:      #7c3aed;
+  --violet-dim:  rgba(124,58,237,0.15);
+  --pink:        #ec4899;
+  --green:       #10b981;
+
+  --grad-main:   linear-gradient(135deg, #00d4ff 0%, #7c3aed 60%, #ec4899 100%);
+  --grad-btn:    linear-gradient(135deg, #00d4ff, #7c3aed);
+  --grad-subtle: linear-gradient(135deg, rgba(0,212,255,0.1), rgba(124,58,237,0.1));
+
+  --text:        #f1f5f9;
+  --text-2:      #94a3b8;
+  --text-3:      #64748b;
+
+  --radius:      16px;
+  --radius-sm:   10px;
+  --radius-lg:   24px;
+
+  --transition:  0.3s cubic-bezier(0.4,0,0.2,1);
+  --transition-slow: 0.6s cubic-bezier(0.4,0,0.2,1);
+
+  --shadow-glow: 0 0 40px rgba(0,212,255,0.15);
+  --shadow-card: 0 8px 40px rgba(0,0,0,0.4);
+}
