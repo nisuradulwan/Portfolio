@@ -174,7 +174,7 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
   color: var(--text-3);
   letter-spacing: 0.1em;
 }
-/*  Navbar */
+/* --- Navbar--- */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -289,6 +289,55 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
 .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+
+/* --Buttons--  */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--grad-btn);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2);
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.35);
+}
+
+.btn-ghost {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border-2);
+}
+
+.btn-ghost:hover {
+  background: var(--surface-2);
+  border-color: var(--cyan);
+  color: var(--cyan);
+  transform: translateY(-2px);
+}
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+}
+
+
+
+
 
 
 
