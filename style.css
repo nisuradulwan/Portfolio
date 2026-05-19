@@ -492,7 +492,64 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
   }
 }
 
+.hero-name {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
 
+.name-gradient {
+  background: var(--grad-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+}
+
+.hero-role {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: var(--text-2);
+  margin-bottom: 1.5rem;
+  min-height: 2em;
+}
+
+.role-prefix {
+  color: var(--text-2);
+}
+
+.typed-text {
+  color: var(--cyan);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+}
+
+.typed-cursor {
+  color: var(--cyan);
+  animation: blink 0.8s step-end infinite;
+  font-weight: 300;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero-desc {
+  color: var(--text-2);
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+  line-height: 1.75;
+}
 
 
 }
