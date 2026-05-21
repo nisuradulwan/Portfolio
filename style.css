@@ -944,4 +944,93 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
   font-weight: 500;
 }
 
+/* -- Skills (REDESIGNED) -- */
+.skills {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ambient blobs */
+.skills-bg-blobs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.sk-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.12;
+  animation: floatShape 10s ease-in-out infinite alternate;
+}
+
+.sk-blob-1 {
+  width: 500px;
+  height: 500px;
+  background: #7c3aed;
+  top: -100px;
+  left: -100px;
+  animation-duration: 12s;
+}
+
+.sk-blob-2 {
+  width: 400px;
+  height: 400px;
+  background: #f59e0b;
+  bottom: 0;
+  right: -80px;
+  animation-duration: 9s;
+  animation-delay: -3s;
+}
+
+.sk-blob-3 {
+  width: 300px;
+  height: 300px;
+  background: #10b981;
+  top: 40%;
+  left: 40%;
+  animation-duration: 14s;
+  animation-delay: -6s;
+}
+
+/* -- Tabs -- */
+.sk-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.sk-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-2);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.55rem 1.3rem;
+  transition: all var(--transition);
+  letter-spacing: 0.02em;
+}
+
+.sk-tab:hover {
+  color: var(--text);
+  border-color: var(--border-2);
+  background: var(--surface-2);
+}
+
+.sk-tab.active {
+  background: var(--grad-btn);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(0, 212, 255, 0.25);
+}
 
