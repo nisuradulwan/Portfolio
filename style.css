@@ -1169,4 +1169,72 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
   font-weight: 600;
   color: var(--text);
 }
+/* -- Per-card color themes--*/
+/* Java — amber */
+.sk-card--java {
+  border-color: rgba(245, 158, 11, 0.25);
+}
 
+.sk-card--java:hover {
+  box-shadow: 0 12px 40px rgba(245, 158, 11, 0.2);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+.sk-card--java .sk-card-glow {
+  background: radial-gradient(circle at top left, rgba(245, 158, 11, 0.12), transparent 70%);
+}
+
+.sk-card--java .sk-card-icon {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.sk-card--java .sk-ring-fill {
+  stroke: #f59e0b;
+}
+
+/* Python — emerald */
+.sk-card--python {
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.sk-card--python:hover {
+  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.5);
+}
+
+.sk-card--python .sk-card-glow {
+  background: radial-gradient(circle at top left, rgba(16, 185, 129, 0.12), transparent 70%);
+}
+
+.sk-card--python .sk-card-icon {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+
+.sk-card--python .sk-ring-fill {
+  stroke: #10b981;
+}
+
+/* JavaScript — yellow */
+.sk-card--js {
+  border-color: rgba(234, 179, 8, 0.25);
+}
+
+.sk-card--js:hover {
+  box-shadow: 0 12px 40px rgba(234, 179, 8, 0.2);
+  border-color: rgba(234, 179, 8, 0.5);
+}
+
+.sk-card--js .sk-card-glow {
+  background: radial-gradient(circle at top left, rgba(234, 179, 8, 0.12), transparent 70%);
+}
+
+.sk-card--js .sk-card-icon {
+  background: rgba(234, 179, 8, 0.15);
+  color: #eab308;
+}
+
+.sk-card--js .sk-ring-fill {
+  stroke: #eab308;
+}
