@@ -1374,3 +1374,71 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
 .sk-card--graphql .sk-ring-fill {
   stroke: #ec4899;
 }
+/* Git — red-orange */
+.sk-card--git {
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+.sk-card--git:hover {
+  box-shadow: 0 12px 40px rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+.sk-card--git .sk-card-glow {
+  background: radial-gradient(circle at top left, rgba(239, 68, 68, 0.12), transparent 70%);
+}
+
+.sk-card--git .sk-card-icon {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.sk-card--git .sk-ring-fill {
+  stroke: #ef4444;
+}
+
+/* Figma — purple */
+.sk-card--figma {
+  border-color: rgba(124, 58, 237, 0.25);
+}
+
+.sk-card--figma:hover {
+  box-shadow: 0 12px 40px rgba(124, 58, 237, 0.2);
+  border-color: rgba(124, 58, 237, 0.5);
+}
+
+.sk-card--figma .sk-card-glow {
+  background: radial-gradient(circle at top left, rgba(124, 58, 237, 0.12), transparent 70%);
+}
+
+.sk-card--figma .sk-card-icon {
+  background: rgba(124, 58, 237, 0.15);
+  color: #7c3aed;
+}
+
+.sk-card--figma .sk-ring-fill {
+  stroke: #7c3aed;
+}
+
+/* ClickUp — indigo */
+.sk-card--clickup {
+  border-color: rgba(99, 102, 241, 0.25);
+}
+
+.sk-card--clickup:hover {
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+.sk-card--clickup .sk-card-glow {
+  background: radial-gradient(circle at top left, rgba(99, 102, 241, 0.12), transparent 70%);
+}
+
+.sk-card--clickup .sk-card-icon {
+  background: rgba(99, 102, 241, 0.15);
+  color: #6366f1;
+}
+
+.sk-card--clickup .sk-ring-fill {
+  stroke: #6366f1;
+}
