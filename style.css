@@ -1442,3 +1442,70 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
 .sk-card--clickup .sk-ring-fill {
   stroke: #6366f1;
 }
+/* -- Pill River (marquee) -- */
+.sk-pill-river {
+  overflow: hidden;
+  margin-top: 2.5rem;
+  position: relative;
+}
+
+.sk-pill-river::before,
+.sk-pill-river::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.sk-pill-river::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg), transparent);
+}
+
+.sk-pill-river::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg), transparent);
+}
+
+.sk-pill-track {
+  display: flex;
+  gap: 0.75rem;
+  width: max-content;
+  animation: pillScroll 28s linear infinite;
+}
+
+.sk-pill-river:hover .sk-pill-track {
+  animation-play-state: paused;
+}
+
+@keyframes pillScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.sk-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: 99px;
+  padding: 0.45rem 1.1rem;
+  border: 1px solid;
+  white-space: nowrap;
+  transition: transform 0.25s;
+  cursor: default;
+  font-family: 'Syne', sans-serif;
+}
+
+.sk-pill:hover {
+  transform: scale(1.06);
+}
