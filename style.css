@@ -1066,4 +1066,37 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
   gap: 1.5rem;
   margin-bottom: 1rem;
 }
+/* -- Skill Card -- */
+.sk-card {
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 2rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  cursor: default;
+}
+
+.sk-card:hover {
+  transform: translateY(-6px);
+}
+
+.sk-card-glow {
+  position: absolute;
+  inset: -1px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+}
+
+.sk-card:hover .sk-card-glow {
+  opacity: 1;
+}
 
