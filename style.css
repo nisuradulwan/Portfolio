@@ -1238,3 +1238,72 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
 .sk-card--js .sk-ring-fill {
   stroke: #eab308;
 }
+
+/* React — cyan */
+.sk-card--react {
+  border-color: rgba(0, 212, 255, 0.25);
+}
+
+.sk-card--react:hover {
+  box-shadow: 0 12px 40px rgba(0, 212, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.5);
+}
+
+.sk-card--react .sk-card-glow {
+  background: radial-gradient(circle at top left, rgba(0, 212, 255, 0.12), transparent 70%);
+}
+
+.sk-card--react .sk-card-icon {
+  background: rgba(0, 212, 255, 0.15);
+  color: #00d4ff;
+}
+
+.sk-card--react .sk-ring-fill {
+  stroke: #00d4ff;
+}
+
+/* HTML — orange */
+.sk-card--html {
+  border-color: rgba(249, 115, 22, 0.25);
+}
+
+.sk-card--html:hover {
+  box-shadow: 0 12px 40px rgba(249, 115, 22, 0.2);
+  border-color: rgba(249, 115, 22, 0.5);
+}
+
+.sk-card--html .sk-card-glow {
+  background: radial-gradient(circle at top left, rgba(249, 115, 22, 0.12), transparent 70%);
+}
+
+.sk-card--html .sk-card-icon {
+  background: rgba(249, 115, 22, 0.15);
+  color: #f97316;
+}
+
+.sk-card--html .sk-ring-fill {
+  stroke: #f97316;
+}
+
+/* Flutter — blue/sky (Flutter brand color) */
+.sk-card--flutter {
+  border-color: rgba(0, 188, 212, 0.25);
+}
+
+.sk-card--flutter:hover {
+  box-shadow: 0 12px 40px rgba(0, 188, 212, 0.2);
+  border-color: rgba(0, 188, 212, 0.5);
+}
+
+.sk-card--flutter .sk-card-glow {
+  background: radial-gradient(circle at top left, rgba(0, 188, 212, 0.12), transparent 70%);
+}
+
+.sk-card--flutter .sk-card-icon {
+  background: rgba(0, 188, 212, 0.15);
+  color: #00bcd4;
+}
+
+.sk-card--flutter .sk-ring-fill {
+  stroke: #00bcd4;
+}
