@@ -1509,3 +1509,103 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
 .sk-pill:hover {
   transform: scale(1.06);
 }
+/* Pill colours */
+.pill-java {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.pill-py {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.pill-js {
+  color: #eab308;
+  background: rgba(234, 179, 8, 0.1);
+  border-color: rgba(234, 179, 8, 0.35);
+}
+
+.pill-react {
+  color: #00d4ff;
+  background: rgba(0, 212, 255, 0.1);
+  border-color: rgba(0, 212, 255, 0.35);
+}
+
+.pill-flutter {
+  color: #00bcd4;
+  background: rgba(0, 188, 212, 0.1);
+  border-color: rgba(0, 188, 212, 0.35);
+}
+
+.pill-html {
+  color: #f97316;
+  background: rgba(249, 115, 22, 0.1);
+  border-color: rgba(249, 115, 22, 0.35);
+}
+
+.pill-node {
+  color: #84cc16;
+  background: rgba(132, 204, 22, 0.1);
+  border-color: rgba(132, 204, 22, 0.35);
+}
+
+.pill-mysql {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.pill-git {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+.pill-figma {
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.1);
+  border-color: rgba(124, 58, 237, 0.35);
+}
+
+.pill-vscode {
+  color: #0ea5e9;
+  background: rgba(14, 165, 233, 0.1);
+  border-color: rgba(14, 165, 233, 0.35);
+}
+
+.pill-oop {
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.1);
+  border-color: rgba(167, 139, 250, 0.35);
+}
+
+.pill-click {
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+/* -- Responsive --*/
+@media (max-width: 768px) {
+  .sk-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sk-tabs {
+    gap: 0.5rem;
+  }
+
+  .sk-tab {
+    font-size: 0.78rem;
+    padding: 0.45rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sk-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
