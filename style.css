@@ -1033,4 +1033,37 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
   color: #fff;
   box-shadow: 0 4px 18px rgba(0, 212, 255, 0.25);
 }
+/* --Panels-- */
+.sk-panels {
+  position: relative;
+  min-height: 320px;
+}
+
+.sk-panel {
+  display: none;
+}
+
+.sk-panel.active {
+  display: block;
+  animation: skPanelIn 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes skPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sk-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
 
