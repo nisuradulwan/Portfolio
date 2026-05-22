@@ -1307,3 +1307,70 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
 .sk-card--flutter .sk-ring-fill {
   stroke: #00bcd4;
 }
+/* Node — lime */
+.sk-card--node {
+  border-color: rgba(132, 204, 22, 0.25);
+}
+
+.sk-card--node:hover {
+  box-shadow: 0 12px 40px rgba(132, 204, 22, 0.2);
+  border-color: rgba(132, 204, 22, 0.5);
+}
+
+.sk-card--node .sk-card-glow {
+  background: radial-gradient(circle at top left, rgba(132, 204, 22, 0.12), transparent 70%);
+}
+
+.sk-card--node .sk-card-icon {
+  background: rgba(132, 204, 22, 0.15);
+  color: #84cc16;
+}
+
+.sk-card--node .sk-ring-fill {
+  stroke: #84cc16;
+}
+
+/* MySQL — blue */
+.sk-card--mysql {
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+.sk-card--mysql:hover {
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.sk-card--mysql .sk-card-glow {
+  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 70%);
+}
+
+.sk-card--mysql .sk-card-icon {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+}
+
+.sk-card--mysql .sk-ring-fill {
+  stroke: #3b82f6;
+}
+/* GraphQL — pink */
+.sk-card--graphql {
+  border-color: rgba(236, 72, 153, 0.25);
+}
+
+.sk-card--graphql:hover {
+  box-shadow: 0 12px 40px rgba(236, 72, 153, 0.2);
+  border-color: rgba(236, 72, 153, 0.5);
+}
+
+.sk-card--graphql .sk-card-glow {
+  background: radial-gradient(circle at top left, rgba(236, 72, 153, 0.12), transparent 70%);
+}
+
+.sk-card--graphql .sk-card-icon {
+  background: rgba(236, 72, 153, 0.15);
+  color: #ec4899;
+}
+
+.sk-card--graphql .sk-ring-fill {
+  stroke: #ec4899;
+}
