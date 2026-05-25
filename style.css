@@ -1730,3 +1730,24 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
 .overlay-btn:hover {
   background: rgba(255, 255, 255, 0.25);
 }
+.project-body {
+  padding: 1.25rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.ptag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--cyan);
+  background: var(--cyan-dim);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 6px;
+  padding: 0.2rem 0.55rem;
+  font-family: 'JetBrains Mono', monospace;
+}
