@@ -1751,3 +1751,16 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
   padding: 0.2rem 0.55rem;
   font-family: 'JetBrains Mono', monospace;
 }
+.project-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.project-desc {
+  color: var(--text-2);
+  font-size: 0.85rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
