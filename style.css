@@ -1698,3 +1698,18 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
 .project-card:hover .project-img-placeholder {
   transform: scale(1.05);
 }
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
