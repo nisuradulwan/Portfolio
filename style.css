@@ -1678,3 +1678,8 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
 .project-card.featured {
   border-color: rgba(0, 212, 255, 0.2);
 }
+.project-img {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
