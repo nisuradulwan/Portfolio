@@ -1845,3 +1845,33 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
   width: 1px;
   background: linear-gradient(to bottom, var(--cyan), transparent);
 }
+.timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 24px;
+  height: 24px;
+  background: var(--bg);
+  border: 2px solid var(--cyan);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 0 4px var(--cyan-dim);
+  transition: all var(--transition);
+}
+
+.timeline-item:hover .timeline-dot {
+  background: var(--cyan);
+  box-shadow: 0 0 0 6px var(--cyan-dim), 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.timeline-card {
+  flex: 1;
+  padding: 1.25rem;
+}
