@@ -1713,3 +1713,20 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
 .project-card:hover .project-overlay {
   opacity: 1;
 }
+.overlay-btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all var(--transition);
+}
+
+.overlay-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
