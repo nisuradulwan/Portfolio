@@ -1944,3 +1944,89 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
   line-height: 1.75;
   margin-bottom: 2rem;
 }
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  transition: all var(--transition);
+}
+
+a.contact-card:hover {
+  border-color: var(--cyan);
+  transform: translateX(4px);
+}
+
+.cc-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--grad-btn);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.cc-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cc-label {
+  font-size: 0.72rem;
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+.cc-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.cc-arrow {
+  color: var(--text-3);
+  font-size: 0.75rem;
+  transition: transform var(--transition);
+}
+
+a.contact-card:hover .cc-arrow {
+  transform: translateX(4px);
+  color: var(--cyan);
+}
+
+.contact-socials {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.cs-link {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-2);
+  font-size: 1rem;
+  transition: all var(--transition);
+}
+
+.cs-link:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  background: var(--cyan-dim);
+  transform: translateY(-3px);
+} 
