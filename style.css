@@ -1799,3 +1799,49 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
   color: var(--text);
   border-color: var(--border-2);
 }
+/* -- Resume -- */
+.resume {
+  background: var(--bg-2);
+}
+
+.resume-cta {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.timeline-col-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.timeline-col-title i {
+  color: var(--cyan);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 12px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--cyan), transparent);
+}
