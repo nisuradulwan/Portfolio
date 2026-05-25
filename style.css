@@ -1924,3 +1924,23 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
   padding: 0.15rem 0.5rem;
   font-family: 'JetBrains Mono', monospace;
 }
+/*--Contact -- */
+.contact {
+  background: var(--bg);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-intro-text {
+  color: var(--text-2);
+  font-size: 0.97rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
