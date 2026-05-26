@@ -57,7 +57,7 @@ document.body.style.overflow = 'hidden';
   }, { once: true });
 })();
 
-/* === 3. PARTICLE CANVAS === */
+/* ===  PARTICLE CANVAS === */
 (function initParticles() {
   const canvas = document.getElementById('particleCanvas');
   if (!canvas) return;
@@ -87,7 +87,7 @@ document.body.style.overflow = 'hidden';
       this.x += this.vx;
       this.y += this.vy;
 
-      // Mouse repulsion
+     
       if (mouse.x) {
         const dx = this.x - mouse.x;
         const dy = this.y - mouse.y;
@@ -152,7 +152,7 @@ document.body.style.overflow = 'hidden';
   canvas.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
 })();
 
-/* ==== 4. TYPING ANIMATION ==== */
+/* ====  TYPING ANIMATION ==== */
 (function initTyped() {
   const el = document.getElementById('typedText');
   if (!el) return;
@@ -195,3 +195,175 @@ document.body.style.overflow = 'hidden';
   // Start after loader
   setTimeout(type, 2400);
 })();
+
+/* == NAVBAR== */
+(function initNavbar() {
+  const navbar   = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+
+  
+  const onScroll = () => {
+    if (window.scrollY > 50) navbar.classList.add('scrolled');
+    else                      navbar.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+    document.body.classList.toggle('menu-open');
+  });
+
+  
+  navLinks.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+      document.body.classList.remove('menu-open');
+    });
+  });
+})();
+
+/* == ACTIVE NAV ON SCROLL == */
+(function initActiveNav() {
+  const sections  = document.querySelectorAll('section[id]');
+  const navLinks  = document.querySelectorAll('.nav-link[data-section]');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.nav-link[data-section="${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+})();
+
+/* ==  SCROLL PROGRESS BAR == */
+(function initScrollProgress() {
+  const bar = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', () => {
+    const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+    bar.style.width = pct + '%';
+  }, { passive: true });
+})();
+
+/* == BACK TO TOP == */
+(function initBackToTop() {
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else                       btn.classList.remove('visible');
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
+/* == DARK / LIGHT TOGGLE == */
+(function initTheme() {
+  const btn  = document.getElementById('themeToggle');
+  const icon = document.getElementById('themeIcon');
+  const body = document.body;
+
+  // Persist preference
+  const saved = localStorage.getItem('portfolio-theme') || 'dark';
+  body.setAttribute('data-theme', saved);
+  icon.className = saved === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+
+  btn.addEventListener('click', () => {
+    const curr = body.getAttribute('data-theme');
+    const next = curr === 'dark' ? 'light' : 'dark';
+    body.setAttribute('data-theme', next);
+    icon.className = next === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    localStorage.setItem('portfolio-theme', next);
+  });
+})();
+
+/* ==  AOS INIT == */
+AOS.init({
+  duration: 700,
+  easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+  once: true,
+  offset: 60,
+});
+
+/* ==  SKILL BARS == */
+(function initSkillBars() {
+  const fills = document.querySelectorAll('.skill-fill');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const fill = entry.target;
+        fill.style.width = fill.dataset.width + '%';
+        observer.unobserve(fill);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  fills.forEach(f => observer.observe(f));
+})();
+
+/* ==  STATS COUNTER == */
+(function initCounters() {
+  const nums = document.querySelectorAll('.stat-num[data-target]');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el     = entry.target;
+      const target = parseInt(el.dataset.target, 10);
+      const suffix = el.dataset.suffix || '+';
+      let start    = 0;
+      const dur    = 1600;
+      const step   = 16;
+      const inc    = target / (dur / step);
+
+      const timer = setInterval(() => {
+        start += inc;
+        if (start >= target) {
+          el.textContent = target + suffix;
+          clearInterval(timer);
+        } else {
+          el.textContent = Math.floor(start) + suffix;
+        }
+      }, step);
+
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+
+  nums.forEach(n => observer.observe(n));
+})();
+
+/* ==  PROJECT FILTER == */
+(function initProjectFilter() {
+  const btns  = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.project-card');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.classList.remove('hidden');
+          card.style.animation = 'fadeInUp 0.4s ease forwards';
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+})();
+
