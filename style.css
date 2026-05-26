@@ -2153,3 +2153,44 @@ a.contact-card:hover .cc-arrow {
 .newsletter-form button:hover {
   opacity: 0.85;
 }
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer-copy {
+  font-size: 0.82rem;
+  color: var(--text-3);
+}
+
+.heart {
+  color: #ef4444;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.footer-socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-3);
+  font-size: 0.85rem;
+  transition: all var(--transition);
+}
+
+.footer-socials a:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  background: var(--cyan-dim);
+}
