@@ -366,4 +366,186 @@ AOS.init({
     });
   });
 })();
+/* == SMOOTH SCROLL == */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+
+/* == HERO ANIMATIONS == */
+function initHeroAnimations() {
+  // Stagger-in hero elements
+  const items = [
+    '.hero-badge',
+    '.hero-name',
+    '.hero-role',
+    '.hero-desc',
+    '.hero-actions',
+    '.hero-socials',
+    '.hero-visual',
+  ];
+
+  items.forEach((sel, i) => {
+    const el = document.querySelector(sel);
+    if (!el) return;
+    el.style.opacity   = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = `opacity 0.7s ease ${i * 0.1 + 0.1}s, transform 0.7s ease ${i * 0.1 + 0.1}s`;
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        el.style.opacity   = '1';
+        el.style.transform = 'translateY(0)';
+      });
+    });
+  });
+}
+
+/* == ANIMATED GRADIENT BORDER == */
+// Add animated gradient border to featured project card
+(function initGradientBorder() {
+  const featuredCards = document.querySelectorAll('.project-card.featured');
+  featuredCards.forEach(card => {
+    card.style.background = `
+      linear-gradient(var(--bg-2), var(--bg-2)) padding-box,
+      linear-gradient(135deg, #00d4ff, #7c3aed, #ec4899) border-box
+    `;
+    card.style.border = '1px solid transparent';
+  });
+})();
+
+/* == SECTION REVEAL GLOW == */
+// Add subtle glow under section headers on scroll
+(function initSectionGlow() {
+  const headers = document.querySelectorAll('.section-header');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.transition = 'filter 0.8s ease';
+        entry.target.style.filter = 'drop-shadow(0 0 30px rgba(0,212,255,0.08))';
+      }
+    });
+  }, { threshold: 0.5 });
+
+  headers.forEach(h => observer.observe(h));
+})();
+
+/* == NEWSLETTER TOAST == */
+(function initNewsletter() {
+  const btn = document.querySelector('.newsletter-form button');
+  const inp = document.querySelector('.newsletter-form input');
+  if (!btn || !inp) return;
+
+  btn.addEventListener('click', () => {
+    const email = inp.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      inp.style.borderColor = '#ef4444';
+      setTimeout(() => inp.style.borderColor = '', 2000);
+      return;
+    }
+    inp.value = '';
+    showToast('Subscribed! 🎉 Thanks for staying in the loop.');
+  });
+})();
+
+function showToast(msg) {
+  const toast = document.createElement('div');
+  toast.textContent = msg;
+  Object.assign(toast.style, {
+    position: 'fixed',
+    bottom: '2rem',
+    left: '50%',
+    transform: 'translateX(-50%) translateY(20px)',
+    background: 'linear-gradient(135deg, #00d4ff, #7c3aed)',
+    color: '#fff',
+    padding: '0.8rem 1.5rem',
+    borderRadius: '12px',
+    fontSize: '0.88rem',
+    fontWeight: '600',
+    zIndex: '99999',
+    opacity: '0',
+    transition: 'all 0.4s ease',
+    whiteSpace: 'nowrap',
+    boxShadow: '0 8px 30px rgba(0,212,255,0.3)',
+  });
+  document.body.appendChild(toast);
+
+  requestAnimationFrame(() => {
+    toast.style.opacity   = '1';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+  });
+
+  setTimeout(() => {
+    toast.style.opacity   = '0';
+    toast.style.transform = 'translateX(-50%) translateY(20px)';
+    setTimeout(() => toast.remove(), 400);
+  }, 3500);
+}
+
+/* ==  TECH BUBBLE ANIMATION == */
+(function initTechBubbles() {
+  const bubbles = document.querySelectorAll('.tech-bubble');
+  bubbles.forEach((b, i) => {
+    b.style.animationDelay = `${i * 0.08}s`;
+  });
+})();
+
+/* == KEYBOARD ACCESSIBILITY == */
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('navLinks').classList.remove('open');
+    document.body.classList.remove('menu-open');
+  }
+});
+
+/* == PERFORMANCE: Passive Listeners == */
+// All scroll and touch listeners use { passive: true } ✓
+// (already applied above)
+
+/* ==  Console Easter Egg == */
+console.log(
+  `%c
+  ██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗
+  ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗
+  ██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║██║   ██║
+  ██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║██║   ██║
+  ██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝
+  ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝
+
+  👋 Hey there, curious developer!
+  Built with love, caffeine, and clean code.
+  — Nisura Lokuliyana
+  `,
+  'color: #00d4ff; font-family: monospace; font-size: 10px;'
+);
+
+/* == SKILLS TABS == */
+(function initSkillTabs() {
+  const tabs   = document.querySelectorAll('.sk-tab');
+  const panels = document.querySelectorAll('.sk-panel');
+
+  const panelMap = {
+    frontend: 'sk-frontend',
+    backend:  'sk-backend',
+    devops:   'sk-devops',
+    tools:    'sk-tools',
+  };
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      const target = document.getElementById(panelMap[tab.dataset.target]);
+      if (target) target.classList.add('active');
+    });
+  });
+})();
 
