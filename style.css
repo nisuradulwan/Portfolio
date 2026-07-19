@@ -490,6 +490,28 @@ body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: rgba(1
     transform: translate(30px, -30px) scale(1.05);
   }
 }
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 50%;
+}
 
 .hero-name {
   font-family: 'Syne', sans-serif;
