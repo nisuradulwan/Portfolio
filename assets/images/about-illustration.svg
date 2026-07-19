@@ -1,0 +1,359 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" width="420" height="520">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#12122a;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Purple glow gradient -->
+    <radialGradient id="glowPurple" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.35" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Blue accent glow -->
+    <radialGradient id="glowBlue" cx="70%" cy="70%" r="40%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Screen gradient -->
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b" />
+      <stop offset="100%" style="stop-color:#0f172a" />
+    </linearGradient>
+
+    <!-- Desk gradient -->
+    <linearGradient id="deskGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e3a" />
+      <stop offset="100%" style="stop-color:#13132a" />
+    </linearGradient>
+
+    <!-- Skin gradient -->
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5c5a3" />
+      <stop offset="100%" style="stop-color:#e8a882" />
+    </linearGradient>
+
+    <!-- Hair gradient -->
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c1a0e" />
+      <stop offset="100%" style="stop-color:#1a0f08" />
+    </linearGradient>
+
+    <!-- Shirt gradient -->
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6d28d9" />
+      <stop offset="100%" style="stop-color:#4c1d95" />
+    </linearGradient>
+
+    <!-- Monitor glow -->
+    <filter id="screenGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Soft shadow -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#7c3aed" flood-opacity="0.3"/>
+    </filter>
+
+    <!-- Blur filter for glow effects -->
+    <filter id="blur8">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="blur4">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+
+    <!-- Clip paths -->
+    <clipPath id="screenClip">
+      <rect x="95" y="120" width="230" height="145" rx="4"/>
+    </clipPath>
+    <clipPath id="roundedCard">
+      <rect x="0" y="0" width="420" height="520" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <!-- Card background -->
+  <rect width="420" height="520" rx="24" fill="url(#bgGrad)"/>
+  <rect width="420" height="520" rx="24" fill="url(#glowPurple)"/>
+  <rect width="420" height="520" rx="24" fill="url(#glowBlue)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04" clip-path="url(#roundedCard)">
+    <line x1="0" y1="52" x2="420" y2="52" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="104" x2="420" y2="104" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="156" x2="420" y2="156" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="208" x2="420" y2="208" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="260" x2="420" y2="260" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="312" x2="420" y2="312" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="364" x2="420" y2="364" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="416" x2="420" y2="416" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="468" x2="420" y2="468" stroke="#fff" stroke-width="1"/>
+    <line x1="52" y1="0" x2="52" y2="520" stroke="#fff" stroke-width="1"/>
+    <line x1="104" y1="0" x2="104" y2="520" stroke="#fff" stroke-width="1"/>
+    <line x1="156" y1="0" x2="156" y2="520" stroke="#fff" stroke-width="1"/>
+    <line x1="208" y1="0" x2="208" y2="520" stroke="#fff" stroke-width="1"/>
+    <line x1="260" y1="0" x2="260" y2="520" stroke="#fff" stroke-width="1"/>
+    <line x1="312" y1="0" x2="312" y2="520" stroke="#fff" stroke-width="1"/>
+    <line x1="364" y1="0" x2="364" y2="520" stroke="#fff" stroke-width="1"/>
+  </g>
+
+  <!-- Floating orbs background -->
+  <circle cx="340" cy="80" r="60" fill="#7c3aed" opacity="0.08" filter="url(#blur8)"/>
+  <circle cx="60" cy="420" r="50" fill="#06b6d4" opacity="0.1" filter="url(#blur8)"/>
+  <circle cx="380" cy="420" r="35" fill="#a855f7" opacity="0.1" filter="url(#blur8)"/>
+
+  <!-- Decorative dots top-right -->
+  <circle cx="370" cy="40" r="3" fill="#7c3aed" opacity="0.6"/>
+  <circle cx="385" cy="40" r="3" fill="#7c3aed" opacity="0.4"/>
+  <circle cx="400" cy="40" r="3" fill="#7c3aed" opacity="0.2"/>
+  <circle cx="370" cy="55" r="3" fill="#7c3aed" opacity="0.4"/>
+  <circle cx="385" cy="55" r="3" fill="#7c3aed" opacity="0.2"/>
+  <circle cx="370" cy="70" r="3" fill="#7c3aed" opacity="0.2"/>
+
+  <!-- ======= DESK / FURNITURE ======= -->
+  <!-- Desk surface -->
+  <rect x="30" y="350" width="360" height="18" rx="4" fill="url(#deskGrad)" filter="url(#softShadow)"/>
+  <rect x="30" y="350" width="360" height="4" rx="2" fill="#2a2a5a" opacity="0.6"/>
+
+  <!-- Desk legs -->
+  <rect x="55" y="368" width="12" height="80" rx="3" fill="#181830"/>
+  <rect x="353" y="368" width="12" height="80" rx="3" fill="#181830"/>
+
+  <!-- ======= MONITOR ======= -->
+  <!-- Monitor stand base -->
+  <ellipse cx="210" cy="358" rx="38" ry="7" fill="#1a1a35"/>
+  <!-- Monitor stand neck -->
+  <rect x="205" y="305" width="10" height="55" rx="3" fill="#1a1a35"/>
+  <!-- Monitor body outer -->
+  <rect x="85" y="108" width="250" height="200" rx="14" fill="#111128" filter="url(#softShadow)"/>
+  <!-- Monitor border glow -->
+  <rect x="85" y="108" width="250" height="200" rx="14" fill="none" stroke="#7c3aed" stroke-width="1.5" opacity="0.4"/>
+  <!-- Monitor screen -->
+  <rect x="95" y="118" width="230" height="152" rx="6" fill="url(#screenGrad)"/>
+
+  <!-- Screen content glow -->
+  <rect x="95" y="118" width="230" height="152" rx="6" fill="#6d28d9" opacity="0.05" filter="url(#blur4)"/>
+
+  <!-- Code on screen -->
+  <!-- Line 1 -->
+  <rect x="110" y="132" width="18" height="7" rx="2" fill="#f472b6" opacity="0.9"/>
+  <rect x="133" y="132" width="35" height="7" rx="2" fill="#a5f3fc" opacity="0.8"/>
+  <rect x="173" y="132" width="15" height="7" rx="2" fill="#fbbf24" opacity="0.8"/>
+  <rect x="193" y="132" width="40" height="7" rx="2" fill="#86efac" opacity="0.7"/>
+
+  <!-- Line 2 -->
+  <rect x="118" y="146" width="12" height="6" rx="2" fill="#c4b5fd" opacity="0.8"/>
+  <rect x="135" y="146" width="28" height="6" rx="2" fill="#fbbf24" opacity="0.7"/>
+  <rect x="168" y="146" width="5" height="6" rx="2" fill="#f472b6" opacity="0.6"/>
+  <rect x="178" y="146" width="45" height="6" rx="2" fill="#86efac" opacity="0.7"/>
+
+  <!-- Line 3 -->
+  <rect x="118" y="158" width="20" height="6" rx="2" fill="#c4b5fd" opacity="0.8"/>
+  <rect x="143" y="158" width="5" height="6" rx="2" fill="#f472b6" opacity="0.6"/>
+  <rect x="153" y="158" width="55" height="6" rx="2" fill="#a5f3fc" opacity="0.7"/>
+
+  <!-- Line 4 - highlighted active line -->
+  <rect x="110" y="170" width="150" height="8" rx="2" fill="#7c3aed" opacity="0.25"/>
+  <rect x="118" y="172" width="22" height="5" rx="1" fill="#f472b6" opacity="0.9"/>
+  <rect x="145" y="172" width="38" height="5" rx="1" fill="#fbbf24" opacity="0.8"/>
+  <rect x="188" y="172" width="18" height="5" rx="1" fill="#86efac" opacity="0.8"/>
+
+  <!-- Line 5 -->
+  <rect x="118" y="184" width="30" height="6" rx="2" fill="#c4b5fd" opacity="0.7"/>
+  <rect x="153" y="184" width="8" height="6" rx="2" fill="#f472b6" opacity="0.6"/>
+  <rect x="166" y="184" width="50" height="6" rx="2" fill="#86efac" opacity="0.7"/>
+
+  <!-- Line 6 -->
+  <rect x="110" y="196" width="12" height="6" rx="2" fill="#f472b6" opacity="0.9"/>
+  <rect x="127" y="196" width="20" height="6" rx="2" fill="#a5f3fc" opacity="0.6"/>
+
+  <!-- Line 7 shorter -->
+  <rect x="110" y="208" width="80" height="6" rx="2" fill="#c4b5fd" opacity="0.5"/>
+
+  <!-- Line numbers sidebar -->
+  <rect x="95" y="118" width="12" height="152" rx="0" fill="#0c0c22" opacity="0.5"/>
+  <rect x="99" y="132" width="4" height="5" rx="1" fill="#4a4a8a" opacity="0.7"/>
+  <rect x="99" y="146" width="4" height="5" rx="1" fill="#4a4a8a" opacity="0.7"/>
+  <rect x="99" y="158" width="4" height="5" rx="1" fill="#4a4a8a" opacity="0.7"/>
+  <rect x="99" y="170" width="4" height="5" rx="1" fill="#7c3aed" opacity="0.9"/>
+  <rect x="99" y="184" width="4" height="5" rx="1" fill="#4a4a8a" opacity="0.7"/>
+  <rect x="99" y="196" width="4" height="5" rx="1" fill="#4a4a8a" opacity="0.7"/>
+  <rect x="99" y="208" width="4" height="5" rx="1" fill="#4a4a8a" opacity="0.7"/>
+
+  <!-- Cursor blink on active line -->
+  <rect x="209" y="171" width="2" height="7" rx="1" fill="#e2e8f0" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0;0.9" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Screen bottom tab bar -->
+  <rect x="95" y="254" width="230" height="16" rx="0" fill="#0d0d22" opacity="0.8"/>
+  <rect x="105" y="258" width="40" height="8" rx="3" fill="#7c3aed" opacity="0.7"/>
+  <rect x="150" y="258" width="35" height="8" rx="3" fill="#2a2a5a" opacity="0.6"/>
+  <rect x="190" y="258" width="32" height="8" rx="3" fill="#2a2a5a" opacity="0.6"/>
+
+  <!-- ======= KEYBOARD ======= -->
+  <rect x="125" y="338" width="170" height="14" rx="4" fill="#1a1a38"/>
+  <rect x="125" y="338" width="170" height="14" rx="4" fill="none" stroke="#2a2a55" stroke-width="1"/>
+  <!-- Key rows -->
+  <g fill="#252550" opacity="0.9">
+    <rect x="130" y="340" width="8" height="4" rx="1"/>
+    <rect x="140" y="340" width="8" height="4" rx="1"/>
+    <rect x="150" y="340" width="8" height="4" rx="1"/>
+    <rect x="160" y="340" width="8" height="4" rx="1"/>
+    <rect x="170" y="340" width="8" height="4" rx="1"/>
+    <rect x="180" y="340" width="8" height="4" rx="1"/>
+    <rect x="190" y="340" width="8" height="4" rx="1"/>
+    <rect x="200" y="340" width="8" height="4" rx="1"/>
+    <rect x="210" y="340" width="8" height="4" rx="1"/>
+    <rect x="220" y="340" width="8" height="4" rx="1"/>
+    <rect x="230" y="340" width="8" height="4" rx="1"/>
+    <rect x="240" y="340" width="8" height="4" rx="1"/>
+    <rect x="250" y="340" width="8" height="4" rx="1"/>
+    <rect x="260" y="340" width="8" height="4" rx="1"/>
+    <rect x="270" y="340" width="20" height="4" rx="1"/>
+    <!-- Row 2 -->
+    <rect x="133" y="346" width="10" height="4" rx="1"/>
+    <rect x="145" y="346" width="8" height="4" rx="1"/>
+    <rect x="155" y="346" width="8" height="4" rx="1"/>
+    <rect x="165" y="346" width="8" height="4" rx="1"/>
+    <rect x="175" y="346" width="8" height="4" rx="1"/>
+    <rect x="185" y="346" width="8" height="4" rx="1"/>
+    <rect x="195" y="346" width="8" height="4" rx="1"/>
+    <rect x="205" y="346" width="8" height="4" rx="1"/>
+    <rect x="215" y="346" width="8" height="4" rx="1"/>
+    <rect x="225" y="346" width="8" height="4" rx="1"/>
+    <rect x="235" y="346" width="8" height="4" rx="1"/>
+    <rect x="245" y="346" width="8" height="4" rx="1"/>
+    <rect x="255" y="346" width="14" height="4" rx="1"/>
+    <!-- Spacebar -->
+    <rect x="155" y="348" width="110" height="4" rx="1" fill="#7c3aed" opacity="0.4"/>
+  </g>
+
+  <!-- ======= PERSON ======= -->
+  <!-- Body / shirt -->
+  <ellipse cx="210" cy="395" rx="70" ry="55" fill="url(#shirtGrad)"/>
+  <!-- Collar area -->
+  <path d="M185 340 Q210 360 235 340 L240 355 Q210 375 180 355 Z" fill="#5b21b6"/>
+
+  <!-- Arms -->
+  <!-- Left arm -->
+  <path d="M148 360 Q120 375 110 348" stroke="url(#skinGrad)" stroke-width="22" stroke-linecap="round" fill="none"/>
+  <!-- Right arm -->
+  <path d="M272 360 Q300 375 310 348" stroke="url(#skinGrad)" stroke-width="22" stroke-linecap="round" fill="none"/>
+
+  <!-- Left hand on keyboard -->
+  <ellipse cx="115" cy="344" rx="14" ry="9" fill="#f5c5a3"/>
+  <!-- Right hand on keyboard -->
+  <ellipse cx="305" cy="344" rx="14" ry="9" fill="#f5c5a3"/>
+
+  <!-- Neck -->
+  <rect x="198" y="305" width="24" height="38" rx="10" fill="#f5c5a3"/>
+
+  <!-- Head -->
+  <ellipse cx="210" cy="285" rx="50" ry="55" fill="url(#skinGrad)"/>
+
+  <!-- Hair -->
+  <ellipse cx="210" cy="248" rx="50" ry="28" fill="url(#hairGrad)"/>
+  <path d="M162 262 Q165 240 185 232 Q210 224 235 232 Q255 240 258 262 Q250 248 210 246 Q170 248 162 262Z" fill="url(#hairGrad)"/>
+  <!-- Hair side -->
+  <ellipse cx="163" cy="270" rx="10" ry="22" fill="url(#hairGrad)"/>
+  <ellipse cx="257" cy="270" rx="10" ry="22" fill="url(#hairGrad)"/>
+
+  <!-- Ears -->
+  <ellipse cx="161" cy="290" rx="8" ry="10" fill="#e8a882"/>
+  <ellipse cx="259" cy="290" rx="8" ry="10" fill="#e8a882"/>
+
+  <!-- Eyes -->
+  <!-- Left eye -->
+  <ellipse cx="192" cy="285" rx="9" ry="10" fill="white"/>
+  <ellipse cx="193" cy="286" rx="6" ry="7" fill="#2c1a0e"/>
+  <ellipse cx="194" cy="286" rx="4" ry="4.5" fill="#1a0f08"/>
+  <ellipse cx="196" cy="284" rx="1.5" ry="1.5" fill="white" opacity="0.9"/>
+  <!-- Right eye -->
+  <ellipse cx="228" cy="285" rx="9" ry="10" fill="white"/>
+  <ellipse cx="229" cy="286" rx="6" ry="7" fill="#2c1a0e"/>
+  <ellipse cx="230" cy="286" rx="4" ry="4.5" fill="#1a0f08"/>
+  <ellipse cx="232" cy="284" rx="1.5" ry="1.5" fill="white" opacity="0.9"/>
+
+  <!-- Eyebrows -->
+  <path d="M183 274 Q192 270 201 273" stroke="#2c1a0e" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M219 273 Q228 270 237 274" stroke="#2c1a0e" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Nose -->
+  <path d="M207 295 Q210 308 213 295" stroke="#cc9977" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Smile -->
+  <path d="M197 310 Q210 322 223 310" stroke="#cc8866" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- ======= FLOATING ELEMENTS ======= -->
+  <!-- Floating tag top-left -->
+  <g transform="translate(28, 60)">
+    <rect width="72" height="28" rx="8" fill="#1e1b4b" stroke="#7c3aed" stroke-width="1" opacity="0.9"/>
+    <text x="10" y="18" font-family="monospace" font-size="10" fill="#a5f3fc">&lt;/code&gt;</text>
+    <animateTransform attributeName="transform" type="translate" values="28,60;28,52;28,60" dur="3s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Floating tag top-right -->
+  <g transform="translate(318, 42)">
+    <rect width="68" height="28" rx="8" fill="#1e1b4b" stroke="#06b6d4" stroke-width="1" opacity="0.9"/>
+    <text x="10" y="18" font-family="monospace" font-size="10" fill="#f472b6">function</text>
+    <animateTransform attributeName="transform" type="translate" values="318,42;318,50;318,42" dur="2.5s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Floating star particles -->
+  <circle cx="55" cy="150" r="2" fill="#a855f7" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="365" cy="200" r="2.5" fill="#06b6d4" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="40" cy="300" r="2" fill="#f472b6" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="380" cy="140" r="1.5" fill="#fbbf24" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Bottom tech pills -->
+  <g transform="translate(40, 450)">
+    <rect width="60" height="22" rx="11" fill="#1e1b4b" stroke="#7c3aed" stroke-width="1"/>
+    <text x="10" y="15" font-family="monospace" font-size="9" fill="#c4b5fd">React.js</text>
+  </g>
+  <g transform="translate(112, 450)">
+    <rect width="50" height="22" rx="11" fill="#1e1b4b" stroke="#06b6d4" stroke-width="1"/>
+    <text x="9" y="15" font-family="monospace" font-size="9" fill="#a5f3fc">Node.js</text>
+  </g>
+  <g transform="translate(174, 450)">
+    <rect width="42" height="22" rx="11" fill="#1e1b4b" stroke="#f472b6" stroke-width="1"/>
+    <text x="9" y="15" font-family="monospace" font-size="9" fill="#fda4af">Java</text>
+  </g>
+  <g transform="translate(228, 450)">
+    <rect width="36" height="22" rx="11" fill="#1e1b4b" stroke="#fbbf24" stroke-width="1"/>
+    <text x="8" y="15" font-family="monospace" font-size="9" fill="#fde68a">CSS</text>
+  </g>
+  <g transform="translate(276, 450)">
+    <rect width="42" height="22" rx="11" fill="#1e1b4b" stroke="#86efac" stroke-width="1"/>
+    <text x="7" y="15" font-family="monospace" font-size="9" fill="#86efac">C++</text>
+  </g>
+  <g transform="translate(330, 450)">
+    <rect width="48" height="22" rx="11" fill="#1e1b4b" stroke="#a855f7" stroke-width="1"/>
+    <text x="8" y="15" font-family="monospace" font-size="9" fill="#d8b4fe">Git</text>
+  </g>
+
+  <!-- Bottom name tag -->
+  <g transform="translate(90, 483)">
+    <rect width="240" height="28" rx="8" fill="#1e1b4b" stroke="#7c3aed" stroke-width="1" opacity="0.7"/>
+    <text x="120" y="18" font-family="monospace" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="bold">Nisura · Software Engineer</text>
+  </g>
+
+  <!-- Border frame -->
+  <rect x="1" y="1" width="418" height="518" rx="23" fill="none" stroke="#7c3aed" stroke-width="1" opacity="0.3"/>
+  <rect x="3" y="3" width="414" height="514" rx="21" fill="none" stroke="#7c3aed" stroke-width="0.5" opacity="0.15"/>
+</svg>
